@@ -31,7 +31,7 @@ __decorate([
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>Hello {{name}}</h1>\n            <courses></courses>\n            <p myhighlight highlightColor=\"yellow\"> Highlighter Directive1</p>\n            <p myhighlight [highlightColor]=\"'yellow'\"> Highlighter Directive</p>\n            <p myhighlight [highlightColor]=\"color\">Highlighted with parent component's color</p>\n            <bindings></bindings>\n            <inputoutput [IsSelected]=\"isselected\" [IsSelected1]=\"isselected\" [Is-Selected2]=\"isselected\" [Is-Selected3]=\"isselected\"\n            (change) = \"OnSelectionChanged($event)\"></inputoutput>\n<div> Output : {{output.paramValue}}</div>\n<span> {{name | zigzag}}</span>\n<panel>\n<div class='heading'> This is Heading </div>\n<div class='body'> This is the  body </div>\n</panel>\n"
+        template: "\n<modeldrivenform></modeldrivenform>\n<h1>Hello {{name}}</h1>\n            <courses></courses>\n            <p myhighlight highlightColor=\"yellow\"> Highlighter Directive1</p>\n            <p myhighlight [highlightColor]=\"'yellow'\"> Highlighter Directive</p>\n            <p myhighlight [highlightColor]=\"color\">Highlighted with parent component's color</p>\n            <bindings></bindings>\n            <inputoutput [IsSelected]=\"isselected\" [IsSelected1]=\"isselected\" [Is-Selected2]=\"isselected\" [Is-Selected3]=\"isselected\"\n            (change) = \"OnSelectionChanged($event)\"></inputoutput>\n<div> Output : {{output.paramValue}}</div>\n<span> {{name | zigzag}}</span>\n<panel>\n<div class='heading'> This is Heading </div>\n<div class='body'> This is the  body </div>\n</panel>\n"
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

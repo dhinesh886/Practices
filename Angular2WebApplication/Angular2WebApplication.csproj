@@ -73,6 +73,7 @@
     </Content>
     <Content Include="src\tsconfig.json" />
     <Content Include="package.json" />
+    <Content Include="src\app\Basics\Templates\modeldrivenform.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -99,7 +100,9 @@
     <TypeScriptCompile Include="src\app\Basics\Component\binding.component.ts" />
     <TypeScriptCompile Include="src\app\Basics\Component\courses.component.ts" />
     <TypeScriptCompile Include="src\app\Basics\Component\inputoutpt.component.ts" />
+    <TypeScriptCompile Include="src\app\Basics\Component\modeldrivenform.component.ts" />
     <TypeScriptCompile Include="src\app\Basics\Component\ngcontent.component.ts" />
+    <TypeScriptCompile Include="src\app\Basics\CustomValidators\custom.validators.ts" />
     <TypeScriptCompile Include="src\app\Basics\Directive\highlight.directive.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\Basics\Pipes\zigzag.pipe.ts" />

@@ -16,6 +16,7 @@ var highlight_directive_1 = require("./Directive/highlight.directive");
 var courses_service_1 = require("./Service/courses.service");
 var zigzag_pipe_1 = require("./Pipes/zigzag.pipe");
 var ngcontent_component_1 = require("./Component/ngcontent.component");
+var modeldrivenform_component_1 = require("./Component/modeldrivenform.component");
 var BasicModule = (function () {
     function BasicModule() {
     }
@@ -23,9 +24,9 @@ var BasicModule = (function () {
 }());
 BasicModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-        declarations: [courses_component_1.CoursesComponent, highlight_directive_1.HighlightDirective, binding_component_1.BindingComponent, inputoutpt_component_1.InputOutputComponent, zigzag_pipe_1.ZigZagPipe, ngcontent_component_1.PanelComponent],
-        exports: [courses_component_1.CoursesComponent, highlight_directive_1.HighlightDirective, binding_component_1.BindingComponent, inputoutpt_component_1.InputOutputComponent, zigzag_pipe_1.ZigZagPipe, ngcontent_component_1.PanelComponent],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
+        declarations: [courses_component_1.CoursesComponent, highlight_directive_1.HighlightDirective, binding_component_1.BindingComponent, inputoutpt_component_1.InputOutputComponent, zigzag_pipe_1.ZigZagPipe, ngcontent_component_1.PanelComponent, modeldrivenform_component_1.ModelDrivenFormComponent],
+        exports: [courses_component_1.CoursesComponent, highlight_directive_1.HighlightDirective, binding_component_1.BindingComponent, inputoutpt_component_1.InputOutputComponent, zigzag_pipe_1.ZigZagPipe, ngcontent_component_1.PanelComponent, modeldrivenform_component_1.ModelDrivenFormComponent],
         providers: [courses_service_1.CoursesService] // services/providers which are part of this module
     })
 ], BasicModule);

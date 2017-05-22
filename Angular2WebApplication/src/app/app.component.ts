@@ -2,7 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: `<h1>Hello {{name}}</h1>
+    template: `
+<modeldrivenform></modeldrivenform>
+<h1>Hello {{name}}</h1>
             <courses></courses>
             <p myhighlight highlightColor="yellow"> Highlighter Directive1</p>
             <p myhighlight [highlightColor]="'yellow'"> Highlighter Directive</p>
