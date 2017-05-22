@@ -1,6 +1,6 @@
 ﻿<form [formGroup]="passwordForm">
     <div class="form-group">
-        <label>Current Password</label><input type="password" formControlName="currentPassword" />
+        <label>Current Password</label><input type="password" formControlName="currentPassword" class="form-control" />
         <div *ngIf="passwordForm.controls.currentPassword.pending">validating...</div>
         <div *ngIf="passwordForm.controls.currentPassword.touched && passwordForm.controls.currentPassword.errors">
             <div *ngIf="passwordForm.controls.currentPassword.errors.required" class="alert alert-danger">
