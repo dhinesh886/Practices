@@ -68,11 +68,27 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="src\app\AppComponentTemplate.html" />
+    <Content Include="src\app\Basics\Component\Templates\simpleForm.html" />
     <Content Include="src\tsconfig.json" />
     <Content Include="package.json" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -100,6 +116,7 @@
     <TypeScriptCompile Include="src\app\Basics\Component\courses.component.ts" />
     <TypeScriptCompile Include="src\app\Basics\Component\inputoutpt.component.ts" />
     <TypeScriptCompile Include="src\app\Basics\Component\ngcontent.component.ts" />
+    <TypeScriptCompile Include="src\app\Basics\Component\simpleform.components.ts" />
     <TypeScriptCompile Include="src\app\Basics\Directive\highlight.directive.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\Basics\Pipes\zigzag.pipe.ts" />

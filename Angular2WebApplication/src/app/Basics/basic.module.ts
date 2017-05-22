@@ -9,11 +9,12 @@ import { HighlightDirective } from './Directive/highlight.directive';
 import { CoursesService } from "./Service/courses.service";
 import { ZigZagPipe } from "./Pipes/zigzag.pipe";
 import { PanelComponent } from './Component/ngcontent.component';
+import { SimpleFormComponent } from './Component/simpleform.components'
 
 @NgModule({
     imports: [BrowserModule, FormsModule], // dependent modules
-    declarations: [CoursesComponent, HighlightDirective, BindingComponent, InputOutputComponent, ZigZagPipe, PanelComponent], // Current module components and directives and pipes
-    exports: [CoursesComponent, HighlightDirective, BindingComponent, InputOutputComponent, ZigZagPipe, PanelComponent],  // things to be visible in other modules(Since, we are using all these comps in main app comp, have exported everything)
+    declarations: [CoursesComponent, HighlightDirective, BindingComponent, InputOutputComponent, ZigZagPipe, PanelComponent, SimpleFormComponent], // Current module components and directives and pipes
+    exports: [CoursesComponent, HighlightDirective, BindingComponent, InputOutputComponent, ZigZagPipe, PanelComponent, SimpleFormComponent],  // things to be visible in other modules(Since, we are using all these comps in main app comp, have exported everything)
     providers: [CoursesService] // services/providers which are part of this module
 })
 

@@ -1,0 +1,31 @@
+﻿<form #simpleForm="ngForm" (submit) ="OnSubmit(simpleForm.form)">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name ="name" value="" class="form-control" ngModel #name="ngModel" required/>
+        <div *ngIf="name.touched && name.errors" class="alert alert-danger">
+            this field cannot be empty
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" name ="email" value="" class="form-control" ngModel #email="ngModel" required />
+        <div *ngIf="email.touched && email.errors" class="alert alert-danger">
+            this field cannot be empty
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Frequency</label>
+        <select class="form-control" name="frequency" ngModel #frequency="ngModel" required>
+            <option>Daily</option>
+            <option>Weekly</option>
+            <option>Monthly</option>
+        </select>
+        <div *ngIf="frequency.touched && frequency.errors" class="alert alert-danger">
+            this field cannot be empty
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!simpleForm.valid">Submit</button>
+    <div *ngIf="_form">
+        {{ _form.value | json}}
+    </div>
+</form>

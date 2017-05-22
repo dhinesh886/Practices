@@ -3,9 +3,9 @@
 @Component({
     selector: 'panel',
     template: `
-<div style='border:1px solid red' >
-<h3><ng-content select='.heading'></ng-content></h3>
-<div><ng-content select='.body'></ng-content></div>
+<div class='panel panel-default' >
+<div class='panel-heading'><ng-content select='.heading'></ng-content></div>
+<div class='panel-body'><ng-content select='.body'></ng-content></div>
 <div>
 `
 })

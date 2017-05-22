@@ -7,16 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var PanelComponent = (function () {
-    function PanelComponent() {
+var SimpleFormComponent = (function () {
+    function SimpleFormComponent() {
     }
-    return PanelComponent;
+    SimpleFormComponent.prototype.OnSubmit = function (form) {
+        this._form = form;
+        console.log(form);
+    };
+    return SimpleFormComponent;
 }());
-PanelComponent = __decorate([
+SimpleFormComponent = __decorate([
     core_1.Component({
-        selector: 'panel',
-        template: "\n<div class='panel panel-default' >\n<div class='panel-heading'><ng-content select='.heading'></ng-content></div>\n<div class='panel-body'><ng-content select='.body'></ng-content></div>\n<div>\n"
+        selector: 'simpleform',
+        templateUrl: './Templates/simpleForm.html'
     })
-], PanelComponent);
-exports.PanelComponent = PanelComponent;
-//# sourceMappingURL=ngcontent.component.js.map
+], SimpleFormComponent);
+exports.SimpleFormComponent = SimpleFormComponent;
+//# sourceMappingURL=simpleform.components.js.map
