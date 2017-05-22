@@ -17,7 +17,7 @@ export class ModelDrivenFormComponent {
     {
         this.passwordForm = fb.group(
             {
-                currentPassword: ['', Validators.required],
+                currentPassword: ['', Validators.required, Validators.composeAsync([CustomValidators.validatePassword])],
                 newPassword: ['', Validators.compose([Validators.required, CustomValidators.passwordStrength])],
                 confirmPassword: ['', Validators.compose([Validators.required, CustomValidators.newPasswordMatch])]
             }

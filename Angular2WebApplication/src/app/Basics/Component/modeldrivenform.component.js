@@ -15,7 +15,7 @@ var custom_validators_1 = require("../CustomValidators/custom.validators");
 var ModelDrivenFormComponent = (function () {
     function ModelDrivenFormComponent(fb) {
         this.passwordForm = fb.group({
-            currentPassword: ['', forms_1.Validators.required],
+            currentPassword: ['', forms_1.Validators.required, forms_1.Validators.composeAsync([custom_validators_1.CustomValidators.validatePassword])],
             newPassword: ['', forms_1.Validators.compose([forms_1.Validators.required, custom_validators_1.CustomValidators.passwordStrength])],
             confirmPassword: ['', forms_1.Validators.compose([forms_1.Validators.required, custom_validators_1.CustomValidators.newPasswordMatch])]
         });
