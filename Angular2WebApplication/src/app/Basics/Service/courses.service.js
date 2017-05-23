@@ -9,8 +9,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var CoursesService = (function () {
     function CoursesService() {
-        this.Courses = ["Angular1.x", "Angualr2.x", "Ionic"];
+        this.Courses = [
+            {
+                Id: "1",
+                Description: "In the last article,We understood how to highlight selected row in Angular 2.",
+                Name: "Angular1.x"
+            },
+            {
+                Id: "2",
+                Description: "Let's use Angular CLI to setup our application.",
+                Name: "Angualr2.x"
+            },
+            {
+                Id: "3",
+                Description: "Here, we will pass data from one component to another component and vice versa.",
+                Name: "Ionic"
+            }
+        ];
     }
+    CoursesService.prototype.GetAllCourses = function () {
+        return this.Courses;
+    };
+    CoursesService.prototype.GetCourseById = function (id) {
+        return this.Courses.find(function (item) { return item.Id == id; });
+    };
     return CoursesService;
 }());
 CoursesService = __decorate([

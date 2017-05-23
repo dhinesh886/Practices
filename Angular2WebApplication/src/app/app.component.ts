@@ -5,7 +5,7 @@ import { Component, ViewChild } from '@angular/core';
     templateUrl: './AppComponentTemplate.html'
 })
 export class AppComponent {
-    name = 'Dhinesh';
+    name = 'Angular 2';
     color = 'yellow';
     @ViewChild('p') htmlpara: HTMLParagraphElement;
     isselected = false;

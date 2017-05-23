@@ -11,24 +11,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var courses_service_1 = require("../Service/courses.service");
-var CoursesComponent = (function () {
-    function CoursesComponent(coursesService) {
-        this.title = "Courses List";
-        this.courses = coursesService.GetAllCourses();
+var CourseDetailsComponent = (function () {
+    function CourseDetailsComponent(_service) {
+        this._service = _service;
     }
-    CoursesComponent.prototype.OnClick = function (course) {
-        this.selectedCourseId = course.Id;
-        this.selectedCourse = course;
-        console.log(course);
-    };
-    return CoursesComponent;
+    return CourseDetailsComponent;
 }());
-CoursesComponent = __decorate([
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], CourseDetailsComponent.prototype, "title", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], CourseDetailsComponent.prototype, "courseId", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], CourseDetailsComponent.prototype, "course", void 0);
+CourseDetailsComponent = __decorate([
     core_1.Component({
-        selector: "courses",
-        template: "<h5><b>{{ title }}</b></h5>\n               <ul><li *ngFor = \"let course of courses\" (click)='OnClick(course)' >{{ course.Name }}</li></ul>\n                <coursedetails title='Parent Child Communication' [course]=\"selectedCourse\" ></coursedetails>\n",
+        selector: 'coursedetails',
+        template: "\n<h4>{{title}} </h4>\n<div *ngIf=\"course\">\n<h5><b> {{ course.Name }} </b></h5>\n<p> {{ course.Description }} </p>\n</div>\n"
     }),
     __metadata("design:paramtypes", [courses_service_1.CoursesService])
-], CoursesComponent);
-exports.CoursesComponent = CoursesComponent;
-//# sourceMappingURL=courses.component.js.map
+], CourseDetailsComponent);
+exports.CourseDetailsComponent = CourseDetailsComponent;
+//# sourceMappingURL=coursedetails.component.js.map

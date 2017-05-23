@@ -1,5 +1,5 @@
 ﻿
- <div class="container">
+<div class="container">
     <div class="row">
         <div class="col-md-6">
             <panel HeaderText="Template Driven Form">
@@ -16,14 +16,19 @@
             </panel>
         </div>
     </div>
-    <h1>Hello {{name}}</h1>
-    <courses></courses>
-    <p myhighlight highlightColor="yellow"> Highlighter Directive1</p>
+    <h3>Component</h3>
+    <courses #courses></courses>
+    <coursedetails title="Peer Communication" [course]="courses.selectedCourse"></coursedetails>
+    <h3>Directives</h3>
+    <p myhighlight highlightColor="yellow"> Highlighter Directive</p>
     <p myhighlight [highlightColor]="'yellow'"> Highlighter Directive</p>
     <p myhighlight [highlightColor]="color">Highlighted with parent component's color</p>
+    <h3>Bindings</h3>
     <bindings></bindings>
+    <h3>Input Output and Event Binding</h3>
     <inputoutput [IsSelected]="isselected" [IsSelected1]="isselected" [Is-Selected2]="isselected" [Is-Selected3]="isselected"
                  (change)="OnSelectionChanged($event)"></inputoutput>
     <div> Output : {{output.paramValue}}</div>
+    <h3>Custom Pipe</h3>
     <span> {{name | zigzag}}</span>
 </div>

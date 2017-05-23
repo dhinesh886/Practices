@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 import { CoursesComponent } from './Component/courses.component';
 import { BindingComponent } from './Component/binding.component';
+import { CourseDetailsComponent } from './Component/coursedetails.component';
+
 import { InputOutputComponent } from './Component/inputoutpt.component';
 import { HighlightDirective } from './Directive/highlight.directive'; 
 import { CoursesService } from "./Service/courses.service";
@@ -14,8 +16,8 @@ import { ModelDrivenFormComponent } from './Component/modeldrivenform.component'
 
 @NgModule({
     imports: [BrowserModule, FormsModule, ReactiveFormsModule], // dependent modules
-    declarations: [CoursesComponent, HighlightDirective, BindingComponent, InputOutputComponent, ZigZagPipe, PanelComponent, SimpleFormComponent, ModelDrivenFormComponent], // Current module components and directives and pipes
-    exports: [CoursesComponent, HighlightDirective, BindingComponent, InputOutputComponent, ZigZagPipe, PanelComponent, SimpleFormComponent, ModelDrivenFormComponent],  // things to be visible in other modules(Since, we are using all these comps in main app comp, have exported everything)
+    declarations: [CoursesComponent, CourseDetailsComponent, HighlightDirective, BindingComponent, InputOutputComponent, ZigZagPipe, PanelComponent, SimpleFormComponent, ModelDrivenFormComponent], // Current module components and directives and pipes
+    exports: [CoursesComponent, CourseDetailsComponent,HighlightDirective, BindingComponent, InputOutputComponent, ZigZagPipe, PanelComponent, SimpleFormComponent, ModelDrivenFormComponent],  // things to be visible in other modules(Since, we are using all these comps in main app comp, have exported everything)
     providers: [CoursesService] // services/providers which are part of this module
 })
 

@@ -68,10 +68,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="src\Content\bootstrap-theme.css" />
+    <Content Include="src\Content\bootstrap-theme.min.css" />
+    <Content Include="src\Content\bootstrap.css" />
+    <Content Include="src\Content\bootstrap.min.css" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
@@ -104,6 +104,7 @@
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\Basics\basic.module.ts" />
     <TypeScriptCompile Include="src\app\Basics\Component\binding.component.ts" />
+    <TypeScriptCompile Include="src\app\Basics\Component\coursedetails.component.ts" />
     <TypeScriptCompile Include="src\app\Basics\Component\courses.component.ts" />
     <TypeScriptCompile Include="src\app\Basics\Component\inputoutpt.component.ts" />
     <TypeScriptCompile Include="src\app\Basics\Component\modeldrivenform.component.ts" />
@@ -112,6 +113,7 @@
     <TypeScriptCompile Include="src\app\Basics\CustomValidators\custom.validators.ts" />
     <TypeScriptCompile Include="src\app\Basics\Directive\highlight.directive.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\Basics\Models\Course.model.ts" />
     <TypeScriptCompile Include="src\app\Basics\Pipes\zigzag.pipe.ts" />
     <TypeScriptCompile Include="src\app\Basics\Service\courses.service.ts" />
     <TypeScriptCompile Include="src\main.ts" />
