@@ -5,60 +5,23 @@ using System.Collections.Generic;
 
 namespace CSharp
 {
-    class MyFormatter : IFormatProvider, ICustomFormatter
-    {
-        public string Format(string format, object arg, IFormatProvider formatProvider)
-        {
-            switch (format.ToUpper())
-            {
-                case "CUSTOM":
-                    if (arg is short || arg is int || arg is long)
-                        return arg.ToString();
-                    if (arg is Single || arg is Double)
-                        return String.Format("{0:0.00}", arg);
-                    break;
-                // Handle other
-                default:
-                    try
-                    {
-                        return HandleOtherFormats(format, arg);
-                    }
-                    catch (FormatException e)
-                    {
-                        throw new FormatException(String.Format("The format of '{0}' is invalid.", format), e);
-                    }
-            }
-            return arg.ToString(); // only as a last resort
-        }
-
-        private string HandleOtherFormats(string format, object arg)
-        {
-            if (arg is IFormattable)
-                return ((IFormattable)arg).ToString(format, CultureInfo.CurrentCulture);
-            if (arg != null)
-                return arg.ToString();
-            return String.Empty;
-        }
-
-        public object GetFormat(Type formatType)
-        {
-            if (formatType == typeof(ICustomFormatter))
-                return this;
-            return null;
-        }
-    }
     class Program
     {
+        static readonly string rString = "D";
+        private const string cString = "London";
+
+        delegate int delegateWithReturn(int input1, int input2);
+        delegate void delegateWithVoid(int input1, int input2);
+
+        // Constructor
         static Program()
         {
             rString = "E";
         }
-        static readonly string rString = "D";
-        private const string cString = "London";
-        delegate int delegateWithReturn(int input1, int input2);
-        delegate void delegateWithVoid(int input1, int input2);
+        // Main Method
         static void Main(string[] args)
         {
+            // Format number with default formatter
             Console.WriteLine("{0:C}", 10);
             Console.WriteLine("{0:00.0}", 10);
             Console.WriteLine("{0:0}", 10);
@@ -67,23 +30,29 @@ namespace CSharp
             Console.WriteLine("{0:0}", 10.1);
             Console.WriteLine("{0:0.00}", 10.1);
 
-            // works
+            // Format number with custom formatter
             Console.WriteLine(String.Format(new MyFormatter(), "{0:custom}", 9));
             Console.WriteLine(String.Format(new MyFormatter(), "{0:custom}", 9.1));
 
+            // generate unique key
             Console.WriteLine(Convert.ToBase64String(Guid.NewGuid().ToByteArray()));
             Console.ReadKey();
+
+            // Different ways of declaring an array
             int[] intArray1 = new int[] { 1, 2, 3, 4, 5 };
             int[] intArray2 = { 1, 2, 3, 4, 5 };
             int[] intArray3 = new int[5];
 
+            // String insertion 
             string message = "World!";
             message.Insert(0, "Hello ");
             Console.WriteLine(message);
 
+            // Different ways of declaring nullable variables
             Nullable<int> nint1;
             int? nint2;
 
+            // break continue
             for (var i = 1; i <= 5; i++)
             {
                 Console.WriteLine(i);
@@ -94,39 +63,25 @@ namespace CSharp
                     break;
             }
 
+            // read only test
             Console.WriteLine(rString);
 
+            // Method Override test
             new DerivedClass().OverrideMethod();
-
             Person person = new Employee();
             person.ShowMessage();
 
-
-            var list = new List<Employee>() { new Employee { Name = "D" } };
-
-            var result = list.Where(x => x.Name == "D");
-
-            var result1 = intArray1.Where(x => x > 3).ToList();
-
-            Action<string> myAction = str => { Console.WriteLine(str); };
-
-            ShowMessage(myAction);
-
+            // Reference value test
             Person person1 = new Person { Age = 1 };
             Method(person1);
             Console.WriteLine(person1.Age.ToString());
 
-            int value = 5;
-            message = "";
-
-            do
-            {
-                value += 2;
-                message = message + value.ToString() + " ";
-            } while (value <= 10);
-
-            Console.WriteLine(message);
-
+            // Linq practice
+            var list = new List<Employee>() { new Employee { Name = "D" } };
+            var result = list.Where(x => x.Name == "D");
+            var result1 = intArray1.Where(x => x > 3).ToList();
+             
+            // Generic class with where clause for type
             var gen = new Generic<Worker>();
 
             Console.ReadKey();
@@ -154,6 +109,9 @@ namespace CSharp
             //// Actions
             Action<int, int> action = (input1, input2) => { Console.WriteLine(input1 + input2); };
             action(5, 6);
+
+            Action<string> myAction = str => { Console.WriteLine(str); };
+            ShowMessage(myAction);
 
             //// Predicate 
             Predicate<int> predicate = (num) => (num > 2);
@@ -246,5 +204,48 @@ namespace CSharp
         {
 
         }
+        class MyFormatter : IFormatProvider, ICustomFormatter
+        {
+            public string Format(string format, object arg, IFormatProvider formatProvider)
+            {
+                switch (format.ToUpper())
+                {
+                    case "CUSTOM":
+                        if (arg is short || arg is int || arg is long)
+                            return arg.ToString();
+                        if (arg is Single || arg is Double)
+                            return String.Format("{0:0.00}", arg);
+                        break;
+                    // Handle other
+                    default:
+                        try
+                        {
+                            return HandleOtherFormats(format, arg);
+                        }
+                        catch (FormatException e)
+                        {
+                            throw new FormatException(String.Format("The format of '{0}' is invalid.", format), e);
+                        }
+                }
+                return arg.ToString(); // only as a last resort
+            }
+
+            private string HandleOtherFormats(string format, object arg)
+            {
+                if (arg is IFormattable)
+                    return ((IFormattable)arg).ToString(format, CultureInfo.CurrentCulture);
+                if (arg != null)
+                    return arg.ToString();
+                return String.Empty;
+            }
+
+            public object GetFormat(Type formatType)
+            {
+                if (formatType == typeof(ICustomFormatter))
+                    return this;
+                return null;
+            }
+        }
+
     }
 }
