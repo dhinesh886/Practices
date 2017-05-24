@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJs", "AngularJs", "{2AE9A301-539B-4562-A6F3-0FC8C0126A7B}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJs", "AngularJs\", "{2AE9A301-539B-4562-A6F3-0FC8C0126A7B}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_53933"
@@ -27,9 +27,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJs", "AngularJs", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{150AAA8B-C936-48D1-9C5E-AE5A8EAF0621}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2WebApplication", "Angular2WebApplication\Angular2WebApplication.csproj", "{8C73652D-BE9B-4E4C-B815-71B8053882C6}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Ionic", "Ionic", "{F571B270-5F6D-4125-88FF-B29F69496B50}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Ionic", "Ionic\", "{F571B270-5F6D-4125-88FF-B29F69496B50}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_58938"
@@ -47,7 +45,50 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Ionic", "Ionic", "{F571B270
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "58938"
+		SlnRelativePath = "Ionic\"
 		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJS2", "AngularJS2\", "{31BAB9A1-4A59-4238-8BD3-25E9597444FA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60294"
+		Debug.AspNetCompiler.PhysicalPath = "AngularJS2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60294\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60294"
+		Release.AspNetCompiler.PhysicalPath = "AngularJS2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60294\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60294"
+		SlnRelativePath = "AngularJS2\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJSUnitTest", "AngularJSUnitTest\", "{0A7EB91C-EC30-444B-A64A-DB84CA119D32}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60487"
+		Debug.AspNetCompiler.PhysicalPath = "AngularJSUnitTest\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60487\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60487"
+		Release.AspNetCompiler.PhysicalPath = "AngularJSUnitTest\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60487\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60487"
+		SlnRelativePath = "AngularJSUnitTest\"
 	EndProjectSection
 EndProject
 Global
@@ -64,14 +105,18 @@ Global
 		{150AAA8B-C936-48D1-9C5E-AE5A8EAF0621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150AAA8B-C936-48D1-9C5E-AE5A8EAF0621}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{150AAA8B-C936-48D1-9C5E-AE5A8EAF0621}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C73652D-BE9B-4E4C-B815-71B8053882C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C73652D-BE9B-4E4C-B815-71B8053882C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C73652D-BE9B-4E4C-B815-71B8053882C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C73652D-BE9B-4E4C-B815-71B8053882C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F571B270-5F6D-4125-88FF-B29F69496B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F571B270-5F6D-4125-88FF-B29F69496B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F571B270-5F6D-4125-88FF-B29F69496B50}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{F571B270-5F6D-4125-88FF-B29F69496B50}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{31BAB9A1-4A59-4238-8BD3-25E9597444FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31BAB9A1-4A59-4238-8BD3-25E9597444FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31BAB9A1-4A59-4238-8BD3-25E9597444FA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{31BAB9A1-4A59-4238-8BD3-25E9597444FA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{0A7EB91C-EC30-444B-A64A-DB84CA119D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A7EB91C-EC30-444B-A64A-DB84CA119D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A7EB91C-EC30-444B-A64A-DB84CA119D32}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A7EB91C-EC30-444B-A64A-DB84CA119D32}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
