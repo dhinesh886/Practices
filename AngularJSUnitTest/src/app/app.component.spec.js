@@ -1,5 +1,6 @@
 "use strict";
 var app_component_1 = require("./app.component");
+var appheader_component_1 = require("./appheader.component");
 var testing_1 = require("@angular/core/testing");
 var platform_browser_1 = require("@angular/platform-browser");
 describe('AppComponent', function () {
@@ -8,20 +9,25 @@ describe('AppComponent', function () {
     var fixture;
     beforeEach(testing_1.async(function () {
         testing_1.TestBed.configureTestingModule({
-            declarations: [app_component_1.AppComponent]
+            declarations: [app_component_1.AppComponent, appheader_component_1.AppHeaderComponent]
         })
             .compileComponents();
     }));
     beforeEach(function () {
         fixture = testing_1.TestBed.createComponent(app_component_1.AppComponent);
         comp = fixture.componentInstance;
-        de = fixture.debugElement.query(platform_browser_1.By.css('h1'));
+        de = fixture.debugElement.query(platform_browser_1.By.css('h3'));
     });
     it('should create component', function () { return expect(comp).toBeDefined(); });
     it('should have expected <h1> text', function () {
         fixture.detectChanges();
-        var h1 = de.nativeElement;
-        expect(h1.innerText).toMatch(/angular/i, '<h1> should say something about "Angular"');
+        var h3 = de.nativeElement;
+        expect(h3.innerText).toMatch(/angular/i, '<h3> should say something about "Angular"');
+    });
+    it('should have the name', function () {
+        fixture.detectChanges();
+        var h3 = de.nativeElement;
+        expect(comp.name).toBeDefined();
     });
 });
 //# sourceMappingURL=app.component.spec.js.map
