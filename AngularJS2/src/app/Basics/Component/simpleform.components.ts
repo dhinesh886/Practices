@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'simpleform',
-    templateUrl: './Templates/simpleForm.html'
+    templateUrl: '../../Templates/simpleForm.html'
 })
 
 export class SimpleFormComponent

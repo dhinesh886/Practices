@@ -1,0 +1,10 @@
+﻿<!--<panel>
+           <div class='heading'> Model Driven Form </div>
+           <div class='body'> <modeldrivenform></modeldrivenform> </div>
+       </panel>-->
+<h3>Components</h3>
+<panel HeaderText="Components">
+    <courses #courses></courses>
+    <coursedetails title="Peer Communication" [course]="courses.selectedCourse"></coursedetails>
+</panel>
+ 

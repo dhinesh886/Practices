@@ -1,4 +1,5 @@
-﻿<form #simpleForm="ngForm" (submit) ="OnSubmit(simpleForm.form)">
+﻿<h3>Template Driven Form</h3>
+<form #simpleForm="ngForm" (submit) ="OnSubmit(simpleForm.form)">
     <div class="form-group">
         <label>Name</label>
         <input type="text" name ="name" value="" class="form-control" ngModel #name="ngModel" required/>
