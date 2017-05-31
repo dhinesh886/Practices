@@ -241,3 +241,7 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /Angular2WebApplication/Scripts
+**/app/**/*.js
+**/app/**/**/*.js
+**/app/**/*.map
+**/app/**/**/*.map
