@@ -1,7 +1,8 @@
 ﻿import { Injectable } from '@angular/core';
-
 import { Course } from '../Models/Course.model';
+
 @Injectable()
+
 export class CoursesService {
     private Courses: Course[] = [
         {

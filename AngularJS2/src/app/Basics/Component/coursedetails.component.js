@@ -8,13 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var courses_service_1 = require("../Service/courses.service");
 var CourseDetailsComponent = (function () {
     function CourseDetailsComponent(_service) {
         this._service = _service;
     }
+    CourseDetailsComponent.prototype.ngOnChanges = function (changedValues) {
+        if (changedValues["courseId"]) {
+            this.course = this._service.GetCourseById(this.courseId);
+        }
+    };
     return CourseDetailsComponent;
 }());
 __decorate([
@@ -32,7 +36,7 @@ __decorate([
 CourseDetailsComponent = __decorate([
     core_1.Component({
         selector: 'coursedetails',
-        template: "\n<h4>{{title}} </h4>\n<div *ngIf=\"course\">\n<h5><b> {{ course.Name }} </b></h5>\n<p> {{ course.Description }} </p>\n</div>\n"
+        template: "\n<h5><b><u>{{title}}</u> </b></h5>\n<div *ngIf=\"course\">\n<b> {{ course.Name }} </b>\n<p> {{ course.Description }} </p>\n</div>\n"
     }),
     __metadata("design:paramtypes", [courses_service_1.CoursesService])
 ], CourseDetailsComponent);

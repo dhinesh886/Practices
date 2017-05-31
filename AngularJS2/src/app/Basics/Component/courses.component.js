@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var courses_service_1 = require("../Service/courses.service");
 var CoursesComponent = (function () {
@@ -26,7 +25,7 @@ var CoursesComponent = (function () {
 CoursesComponent = __decorate([
     core_1.Component({
         selector: "courses",
-        template: "<h5><b>{{ title }}</b></h5>\n               <ul><li *ngFor = \"let course of courses\" (click)='OnClick(course)' >{{ course.Name }}</li></ul>\n                <coursedetails title='Parent Child Communication' [course]=\"selectedCourse\" ></coursedetails>\n",
+        template: "<h5><b>{{ title }}</b></h5>\n               <ul><li *ngFor = \"let course of courses\" (click)='OnClick(course)' >{{ course.Name }}</li></ul>\n                <h4>Component Communication</h4>\n                <coursedetails title='Parent Child Communication' [course]=\"selectedCourse\" ></coursedetails>\n                <coursedetails title='Change Detection' [courseId]=\"selectedCourseId\" ></coursedetails>\n",
     }),
     __metadata("design:paramtypes", [courses_service_1.CoursesService])
 ], CoursesComponent);

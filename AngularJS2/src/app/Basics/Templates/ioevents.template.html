@@ -1,4 +1,10 @@
 ﻿<h3>Input Output and Event Binding</h3>
+<h4>Passing input in different ways</h4>
+<inputoutput [IsSelected]="isselected" [IsSelected1]="isselected" [Is-Selected2]="isselected" [Is-Selected3]="isselected"></inputoutput>
+
+<h4>Event emitting - Child parent commnication</h4>
 <inputoutput [IsSelected]="isselected" [IsSelected1]="isselected" [Is-Selected2]="isselected" [Is-Selected3]="isselected"
              (change)="OnSelectionChanged($event)"></inputoutput>
 <div> Output : {{output.paramValue}}</div>
+
+<h4>Change Detection</h4>

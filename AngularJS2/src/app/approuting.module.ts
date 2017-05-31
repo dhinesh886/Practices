@@ -9,6 +9,7 @@ import { PipesComponent } from './Basics/Component/pipes.component';
 import { SimpleFormComponent } from './Basics/Component/simpleform.components';
 import { ModelDrivenFormComponent } from './Basics/Component/modeldrivenform.component';
 import { HomeComponent } from './Basics/Component/home.component'
+import { HttpServiceComponent} from './Basics/Component/httpservice.component';
 
 const routes: Routes = [
     { path: "*other", redirectTo: "" },
@@ -19,7 +20,8 @@ const routes: Routes = [
     { path: "bindings", component: BindingsComponent },
     { path: "ioevents", component: IOEventsComponent },
     { path: "pipes", component: PipesComponent },
-    { path: "", component: HomeComponent }
+    { path: "", component: HomeComponent },
+    { path: "httpservice", component: HttpServiceComponent },
 ]
 
 @NgModule({

@@ -5,10 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+           "name": "Launch Chrome against localhost, with sourcemaps",
+            "type": "chrome",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceRoot}/node_modules/lite-server/bin/lite-server"
+            "url": "http://localhost:3000",
+            "sourceMaps": true,
+            "trace": true,
+            "webRoot": "${workspaceRoot}/src",
+            "userDataDir": "${workspaceRoot}/.vscode/chrome",
+            "sourceMapPathOverrides": {
+                "webpack:///C:*":"C:/*"
+            }
         }
     ]
 }

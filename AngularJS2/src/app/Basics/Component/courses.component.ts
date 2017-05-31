@@ -7,7 +7,9 @@ import { CourseDetailsComponent } from '../Component/coursedetails.component';
     selector: "courses",
     template: `<h5><b>{{ title }}</b></h5>
                <ul><li *ngFor = "let course of courses" (click)='OnClick(course)' >{{ course.Name }}</li></ul>
+                <h4>Component Communication</h4>
                 <coursedetails title='Parent Child Communication' [course]="selectedCourse" ></coursedetails>
+                <coursedetails title='Change Detection' [courseId]="selectedCourseId" ></coursedetails>
 `,
 
 })
