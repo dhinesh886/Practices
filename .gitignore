@@ -241,6 +241,8 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /Angular2WebApplication/Scripts
+
+# Specific to angular 2.0
 **/app/**/*.js
 **/app/**/**/*.js
 **/app/**/*.map
