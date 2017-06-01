@@ -1,9 +1,33 @@
 <div *ngIf="posts">
-<table>
-    <tr><th>ID</th><th>TITLE</th></tr>
-    <tr *ngFor="let post of posts">
-        <td>{{post.id}}</td>
-        <td>{{post.title}}</td>
-    </tr>
-</table>
+    <div class="row">
+        <div class="col-md-7">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>TITLE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of posts" (click)="OnClick(post.id)" class="clickable">
+                        <td>{{post.id}}</td>
+                        <td>{{post.title}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-5">
+            <div *ngIf="isLoading"><i class="fa fa-spinner fa-spin fa-2x"></i></div>
+            <div *ngIf="post">
+                <div class="row">
+                    <div class="col-md-4">Title</div>
+                    <div class="col-md-8">{{post.title}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">Body</div>
+                    <div class="col-md-8">{{post.body}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
